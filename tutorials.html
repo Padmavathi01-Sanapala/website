@@ -1,0 +1,211 @@
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorials - MITS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <header class="bg-blue-600 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">MITS</h1>
+      <nav>
+        <a href="index.html" class="mx-2 hover:underline">Home</a>
+        <a href="tutorials.html" class="mx-2 hover:underline font-bold">Tutorials</a>
+        <a href="projects.html" class="mx-2 hover:underline">Projects</a>
+        <a href="about.html" class="mx-2 hover:underline">About Us</a>
+        <a href="contact.html" class="mx-2 hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold mb-6">Tutorials</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="text-xl font-semibold">Python Basics</h3>
+        <p class="text-sm">Learn the fundamentals of Python programming.</p>
+        <p class="mt-2 text-xs text-gray-500">Difficulty: Beginner</p>
+        <button class="mt-4 bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700"><a href="tutorials-python.html">Start Tutorial</a></button>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="text-xl font-semibold">Java OOP</h3>
+        <p class="text-sm">Master object-oriented programming in Java.</p>
+        <p class="mt-2 text-xs text-gray-500">Difficulty: Intermediate</p>
+        <button class="mt-4 bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700"><a href="tutorials-java.html">Start Tutorial</a></button>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="text-xl font-semibold">C++ Data Structures</h3>
+        <p class="text-sm">Understand and implement core data structures in C++.</p>
+        <p class="mt-2 text-xs text-gray-500">Difficulty: Advanced</p>
+        <button class="mt-4 bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700"><a href="tutorials-cpp.html">Start Tutorial</a></button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 text-white text-center p-4 mt-8">
+    &copy; 2025 Micro Information Technology Services. All rights reserved.
+  </footer>
+</body>
+</html-->
+<!-- Updated tutorials.html with filters, sorting, and interactive buttons -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorials - LearnHub</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    header, nav {
+      background: #007BFF;
+      color: white;
+      padding: 10px 20px;
+    }
+    nav a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+    }
+    .filters {
+      margin: 20px;
+    }
+    .tutorial-card {
+      background: white;
+      padding: 15px;
+      margin: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .tutorial-card h3 {
+      margin-top: 0;
+    }
+    .button-group button {
+      margin: 5px;
+    }
+    .code-editor {
+      width: 100%;
+      height: 150px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LearnHub - Tutorials</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="signup.html">Sign Up</a>
+    
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+  </header>
+
+  <div class="filters">
+    <label for="difficulty">Filter by Difficulty:</label>
+    <select id="difficulty" onchange="filterTutorials()">
+      <option value="all">All</option>
+      <option value="beginner">Beginner</option>
+      <option value="intermediate">Intermediate</option>
+      <option value="advanced">Advanced</option>
+    </select>
+
+    <label for="sort">Sort by:</label>
+    <select id="sort" onchange="sortTutorials()">
+      <option value="newest">Newest</option>
+      <option value="popular">Most Popular</option>
+    </select>
+  </div>
+
+  <div id="tutorials-list">
+    <div class="tutorial-card" data-difficulty="beginner" data-popularity="5">
+      <h3>Python Basics</h3>
+      <p>Learn the fundamentals of Python programming.</p>
+      <div class="button-group">
+        <a href="tutorials-python.html"><button>Start Tutorial</button></a>
+        <button onclick="openEditor()">Try Code</button>
+        <button onclick="openFeedback()">Give Feedback</button>
+      </div>
+    </div>
+
+    <div class="tutorial-card" data-difficulty="intermediate" data-popularity="4">
+      <h3>Java OOP Concepts</h3>
+      <p>Understand object-oriented programming in Java.</p>
+      <div class="button-group">
+        <a href="tutorials-java.html"><button>Start Tutorial</button></a>
+        <button onclick="openEditor()">Try Code</button>
+        <button onclick="openFeedback()">Give Feedback</button>
+      </div>
+    </div>
+
+    <div class="tutorial-card" data-difficulty="advanced" data-popularity="3">
+      <h3>C++ STL Guide</h3>
+      <p>Master Standard Template Library in C++.</p>
+      <div class="button-group">
+        <a href="tutorials-cpp.html"><button>Start Tutorial</button></a>
+        <button onclick="openEditor()">Try Code</button>
+        <button onclick="openFeedback()">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="editor" style="display:none; margin:20px;">
+    <h3>Try Coding</h3>
+    <textarea class="code-editor" placeholder="Write your code here..."></textarea>
+    <br><button onclick="runCode()">Run</button>
+    <pre id="output"></pre>
+  </div>
+
+  <div id="feedback-form" style="display:none; margin:20px;">
+    <h3>Feedback</h3>
+    <textarea rows="4" cols="50" placeholder="Share your thoughts..."></textarea>
+    <br><button onclick="alert('Feedback submitted!')">Submit</button>
+  </div>
+
+  <script>
+    function filterTutorials() {
+      const level = document.getElementById('difficulty').value;
+      const cards = document.querySelectorAll('.tutorial-card');
+      cards.forEach(card => {
+        const difficulty = card.getAttribute('data-difficulty');
+        card.style.display = (level === 'all' || difficulty === level) ? 'block' : 'none';
+      });
+    }
+
+    function sortTutorials() {
+      const method = document.getElementById('sort').value;
+      const container = document.getElementById('tutorials-list');
+      const cards = Array.from(container.children);
+      cards.sort((a, b) => {
+        const pa = parseInt(a.getAttribute('data-popularity'));
+        const pb = parseInt(b.getAttribute('data-popularity'));
+        return method === 'popular' ? pb - pa : 0;
+      });
+      container.innerHTML = '';
+      cards.forEach(card => container.appendChild(card));
+    }
+
+    function openEditor() {
+      document.getElementById('editor').style.display = 'block';
+    }
+
+    function openFeedback() {
+      document.getElementById('feedback-form').style.display = 'block';
+    }
+
+    function runCode() {
+      const code = document.querySelector('.code-editor').value;
+      document.getElementById('output').innerText = 'Output: ' + code;
+    }
+  </script>
+</body>
+</html>

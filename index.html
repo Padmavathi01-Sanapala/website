@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MITS - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans">
+  <!-- Navigation Bar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-indigo-600">MITS</h1>
+      <nav class="space-x-6">
+        <a href="index.html" class="text-gray-700 hover:text-indigo-600">Home</a>
+        <a href="tutorials.html" class="text-gray-700 hover:text-indigo-600">Tutorials</a>
+        <a href="projects.html" class="text-gray-700 hover:text-indigo-600">Projects</a>
+        <a href="about.html" class="text-gray-700 hover:text-indigo-600">About Us</a>
+        <a href="contact.html" class="text-gray-700 hover:text-indigo-600">Contact</a>
+        <a href="faq.html" class="text-gray-700 hover:text-indigo-600">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Welcome Banner -->
+  <section class="text-center py-12 bg-indigo-100">
+    <h2 class="text-4xl font-bold mb-2 text-indigo-700">Welcome to Micro Information Technology Services (MITS)</h2>
+    <p class="text-lg text-gray-700">Empowering learners through hands-on tutorials and real-world projects</p>
+  </section>
+
+  <!-- Search and CTA -->
+  <div class="max-w-4xl mx-auto mt-8 px-4 text-center">
+    <input type="text" id="searchInput" placeholder="Search tutorials or projects..." class="w-full p-2 border border-gray-300 rounded-md mb-4">
+    <div class="space-x-4">
+      <a href="tutorials.html" class="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700">Start Learning</a>
+      <a href="projects.html" class="bg-gray-700 text-white px-6 py-2 rounded hover:bg-gray-800">Browse Projects</a>
+    </div>
+  </div>
+
+  <!-- Featured Slider (static preview) -->
+  <section class="max-w-6xl mx-auto py-12 px-4">
+    <h3 class="text-2xl font-semibold mb-6">Featured Tutorials</h3>
+    <div class="grid md:grid-cols-3 gap-6" id="tutorialCards">
+      <div class="bg-white shadow-md p-4 rounded" data-title="Python for Beginners">
+        <h4 class="font-bold text-indigo-600">Python for Beginners</h4>
+        <p>Start your Python journey with hands-on examples.</p>
+      </div>
+      <div class="bg-white shadow-md p-4 rounded" data-title="HTML & CSS Basics">
+        <h4 class="font-bold text-indigo-600">HTML & CSS Basics</h4>
+        <p>Build your first webpage with modern HTML/CSS.</p>
+      </div>
+      <div class="bg-white shadow-md p-4 rounded" data-title="JavaScript DOM Tricks">
+        <h4 class="font-bold text-indigo-600">JavaScript DOM Tricks</h4>
+        <p>Master interactive web design with DOM manipulation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- University Affiliations -->
+  <section class="bg-white py-12 px-4">
+    <h3 class="text-2xl font-semibold text-center mb-6">University Affiliations</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-5 gap-4 max-w-6xl mx-auto">
+      <img src="images/1.png" alt="University 1" class="mx-auto">
+      <img src="images/2.png" alt="University 2" class="mx-auto">
+      <img src="images/3.png" alt="University 3" class="mx-auto">
+      <img src="images/4.png" alt="University 4" class="mx-auto">
+      <img src="images/5.png" alt="University 5" class="mx-auto">
+      <img src="images/6.png" alt="University 6" class="mx-auto">
+      <img src="images/7.png" alt="University 7" class="mx-auto">
+      <img src="images/8.png" alt="University 8" class="mx-auto">
+      <img src="images/9.png" alt="University 9" class="mx-auto">
+      <img src="images/10.png" alt="University 10" class="mx-auto">
+    </div>
+  </section>
+
+  <!-- Social Media Stats -->
+  <section class="py-12 px-4 bg-indigo-50">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-xl font-semibold mb-4">Our Reach</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div><span class="text-3xl font-bold text-indigo-700">10K+</span><p>Followers</p></div>
+        <div><span class="text-3xl font-bold text-indigo-700">500+</span><p>Students</p></div>
+        <div><span class="text-3xl font-bold text-indigo-700">100+</span><p>Tutorials</p></div>
+        <div><span class="text-3xl font-bold text-indigo-700">50+</span><p>Projects</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 mt-12">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-4">
+      <div>
+        <h4 class="font-semibold">Quick Links</h4>
+        <ul class="mt-2 space-y-1">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="tutorials.html" class="hover:underline">Tutorials</a></li>
+          <li><a href="projects.html" class="hover:underline">Projects</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold">Contact Info</h4>
+        <p>Email: mit.aryanchoudhary@gmail.com</p>
+        <p>Phone: 9991980433</p>
+      </div>
+      <div>
+        <h4 class="font-semibold">Follow Us</h4>
+        <div class="flex space-x-4 mt-2">
+          <a href="#" class="hover:underline">Facebook</a>
+          <a href="#" class="hover:underline">Twitter</a>
+          <a href="https://www.linkedin.com/company/microitindia/" class="hover:underline">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Search Functionality -->
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const tutorialCards = document.querySelectorAll('[data-title]');
+
+    searchInput.addEventListener('input', function () {
+      const query = searchInput.value.toLowerCase();
+      tutorialCards.forEach(card => {
+        const title = card.getAttribute('data-title').toLowerCase();
+        if (title.includes(query)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

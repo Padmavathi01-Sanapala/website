@@ -1,0 +1,188 @@
+<!-- projects.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - MITS</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    header, main {
+      width: 100%;
+      max-width: 1200px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      background-color: #333;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a.active {
+      text-decoration: underline;
+    }
+    main {
+      background-color: white;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    .project-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem auto;
+      width: 90%;
+      max-width: 500px;
+      background: #f9f9f9;
+    }
+    .project-detail {
+      display: none;
+      margin-top: 1rem;
+    }
+    .rating {
+      margin-top: 0.5rem;
+    }
+    .rating input {
+      margin-right: 5px;
+    }
+    .comments {
+      margin-top: 1rem;
+    }
+  </style>
+  
+</head>
+<body class="bg-gray-100">
+  <nav class="bg-white shadow p-4 flex justify-between items-center">
+    <div class="text-xl font-bold text-blue-600">MITS</div>
+    <div class="space-x-4">
+      <a href="index.html" class="hover:text-blue-600">Home</a>
+      <a href="tutorials.html" class="hover:text-blue-600">Tutorials</a>
+      <a href="projects.html" class="text-blue-600 font-semibold">Projects</a>
+      <a href="about.html" class="hover:text-blue-600">About Us</a>
+      <a href="contact.html" class="hover:text-blue-600">Contact</a>
+    </div>
+  </nav>
+
+  <!--section class="p-6">
+    <h1 class="text-3xl font-bold mb-4">Project Categories</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="bg-white p-4 shadow rounded">
+        <h2 class="text-xl font-semibold">Beginner Project</h2>
+        <p>Simple calculator using HTML/CSS/JS.</p>
+        <a href="#" class="text-blue-600 hover:underline">View Details</a>
+      </div>
+      <div class="bg-white p-4 shadow rounded">
+        <h2 class="text-xl font-semibold">Intermediate Project</h2>
+        <p>To-do List with local storage.</p>
+        <a href="#" class="text-blue-600 hover:underline">View Details</a>
+      </div>
+      <div class="bg-white p-4 shadow rounded">
+        <h2 class="text-xl font-semibold">Advanced Project</h2>
+        <p>Online Code Editor with live preview.</p>
+        <a href="#" class="text-blue-600 hover:underline">View Details</a>
+      </div>
+    </div>
+  </section-->
+  <main>
+    <h1>Project Categories</h1>
+    <section>
+      <h2>Beginner Projects</h2>
+      <div class="project-card">
+        <h3>Simple Calculator</h3>
+        <p>Basic arithmetic calculator using HTML, CSS, and JavaScript.</p>
+        <p><strong>Estimated Time:</strong> 1 hour</p>
+        <button onclick="showDetails('project1')">View Details</button>
+        <div id="project1" class="project-detail">
+          <p>Use buttons for operations and display result in an input field.</p>
+          <pre><code>// JavaScript code
+function add(a, b) {
+  return a + b;
+}</code></pre>
+          <a href="online-editor.html" target="_blank">Try Online</a>
+          <br>
+          <a href="https://github.com/avinash201199/Projects?">Click</a>
+          <div class="rating">
+            <label>Rate this:</label>
+            <input type="number" min="1" max="5" placeholder="Rate 1-5">
+          </div>
+          <div class="comments">
+            <label>Comments:</label><br>
+            <textarea rows="3" cols="30" placeholder="Your feedback..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <h2>Intermediate Projects</h2>
+      <div class="project-card">
+        <h3>To-Do List App</h3>
+        <p>Organize tasks with add/delete/mark completed features.</p>
+        <p><strong>Estimated Time:</strong> 2-3 hours</p>
+        <button onclick="showDetails('project2')">View Details</button>
+        <div id="project2" class="project-detail">
+          <p>Use localStorage to save tasks.</p>
+          <pre><code>// Example HTML: <li>Task <button>Delete</button></li></code></pre>
+          <a href="online-editor.html" target="_blank">Try Online</a>
+          <br>
+          <a href="https://www.projectwaka.com/">Click</a>
+          <div class="rating">
+            <label>Rate this:</label>
+            <input type="number" min="1" max="5" placeholder="Rate 1-5">
+          </div>
+          <div class="comments">
+            <label>Comments:</label><br>
+            <textarea rows="3" cols="30" placeholder="Your feedback..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <h2>Advanced Projects</h2>
+      <div class="project-card">
+        <h3>Weather Forecast Dashboard</h3>
+        <p>Fetch real-time weather data using APIs and display trends.</p>
+        <p><strong>Estimated Time:</strong> 4-5 hours</p>
+        <button onclick="showDetails('project3')">View Details</button>
+        <div id="project3" class="project-detail">
+          <p>Use OpenWeatherMap API to show weather by city.</p>
+          <pre><code>// Sample Fetch
+fetch('api_url')
+.then(response => response.json())</code></pre>
+          <a href="online-editor.html" target="_blank">Try Online</a>
+          <br>
+          <a href="https://nevonprojects.com/project-ideas/communication-project-ideas?">Click</a>
+          <div class="rating">
+            <label>Rate this:</label>
+            <input type="number" min="1" max="5" placeholder="Rate 1-5">
+          </div>
+          <div class="comments">
+            <label>Comments:</label><br>
+            <textarea rows="3" cols="30" placeholder="Your feedback..."></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function showDetails(id) {
+      const detail = document.getElementById(id);
+      detail.style.display = detail.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Java Tutorial - MITS</title>
+  <!--link rel="stylesheet" href="style.css" /-->
+  <style>
+    /* style.css - Shared CSS for all tutorial pages */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #0077cc;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header a {
+  color: #ffe;
+  text-decoration: none;
+  font-size: 0.9em;
+  display: block;
+  margin-top: 10px;
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+section {
+  background: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  color: #0077cc;
+}
+
+pre {
+  background: #f4f4f4;
+  padding: 10px;
+  border-left: 3px solid #0077cc;
+  overflow-x: auto;
+}
+
+code {
+  font-family: "Courier New", monospace;
+  color: #2a2a2a;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Java OOP Tutorial</h1>
+    <p>Understand object-oriented programming in Java with examples.</p>
+    <a href="tutorials.html">← Back to Tutorials</a>
+  </header>
+  <main>
+    <section>
+      <h2>1. Classes and Objects</h2>
+      <pre><code>
+public class Car {
+    String color = "Red";
+    public void drive() {
+        System.out.println("Driving...");
+    }
+}
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>2. Inheritance</h2>
+      <pre><code>
+class Vehicle {
+    void move() {
+        System.out.println("Moving...");
+    }
+}
+class Bike extends Vehicle {}
+      </code></pre>
+    </section>
+  </main>
+</body>
+</html>
